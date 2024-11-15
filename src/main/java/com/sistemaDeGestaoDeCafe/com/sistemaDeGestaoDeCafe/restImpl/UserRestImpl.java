@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sistemaDeGestaoDeCafe.com.sistemaDeGestaoDeCafe.constents.CafeConstants;
 import com.sistemaDeGestaoDeCafe.com.sistemaDeGestaoDeCafe.rest.UserRest;
 import com.sistemaDeGestaoDeCafe.com.sistemaDeGestaoDeCafe.service.UserService;
 import com.sistemaDeGestaoDeCafe.com.sistemaDeGestaoDeCafe.utils.CafeUtils;
@@ -24,7 +25,7 @@ public class UserRestImpl  implements  UserRest{
             e.printStackTrace();
         }
 
-        return CafeUtils.getResponseEntity("",HttpStatus.INTERNAL_SERVER_ERROR);
+        return CafeUtils.getResponseEntity(CafeConstants.SOMETHING_WENT_WRONG,HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
 }
